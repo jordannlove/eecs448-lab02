@@ -38,9 +38,9 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
-	for(int i = 0; i < m_size; i++)
+	while( temp != nullptr )
 	{
-		if(m_front->getValue() == value)
+		if((m_front->getValue()) == value)
 		{
 			isFound = true;
 		}
@@ -110,7 +110,7 @@ bool LinkedList<T>::removeBack()
 
 	if(isEmpty() == true)
 	{
-		isRemoved = true;
+		isRemoved = false;
 	}
 
 	else
